@@ -1,0 +1,17 @@
+h1 {
+    color: darkslategrey;
+    background-color: lightslategray;
+    border-style: ridge;
+    border-color: darkslategray;
+}
+h3 {
+    color: firebrick;
+    background-color: lightpink;
+    border-style: none;
+    border-color: firebrick;
+}
+.box {
+    background-color: lightpink;
+    border-style: ridge;
+    border-color: firebrick;
+}
