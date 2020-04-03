@@ -22,7 +22,7 @@ export class EquipmentComponent implements OnInit {
    maximumAllowedMass: number = 2000;
    maxItems: number = 10;
    cargoSpaceAvailable: number = this.maxItems;
-   //tooHeavy: boolean = false;
+   availableMass: number = this.maximumAllowedMass;
 
    constructor() { }
 
@@ -36,6 +36,7 @@ export class EquipmentComponent implements OnInit {
      //console.log(this.cargoHold.length);
      //console.log(this.cargoSpaceAvailable);
      this.cargoMass += item.mass;
+     this.availableMass = this.maximumAllowedMass - this.cargoMass;
     if(this.cargoMass >= this.maximumAllowedMass - 200){
       return false;
     }else{
