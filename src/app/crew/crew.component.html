@@ -8,8 +8,8 @@
 <div class="displayBox">
     <h3>Crew <span [hidden]="3 > crew.length">Full</span><!-- Add a span tag here to display 'Full' when the crew reaches 3. --></h3>
     <ol>
-        <li *ngFor="let astronaut of crew">{{astronaut.name}}</li>
+        <li (mouseover)="moused = true; mousedPic = astronaut.photo" (mouseout)="moused = false" *ngFor="let astronaut of crew">{{astronaut.name}}</li>
     </ol>
     <!-- Add an img tag here to display astronaut photos. -->
-    <img src=astronaut.photo>
+    <img *ngIf="moused" src="{{mousedPic}}">
 </div>

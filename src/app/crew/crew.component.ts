@@ -9,6 +9,8 @@ export class CrewComponent implements OnInit {
 
   inCrew: boolean = false;
   crew: object[] = [];
+  moused: boolean = false;
+  mousedPic: string = '';
 
   candidates: object[] = [
     {name: "Sally Ride", photo: 'https://handlers.education.launchcode.org/static/images/sally-ride.jpg'},
@@ -26,7 +28,6 @@ export class CrewComponent implements OnInit {
 
   // Code the 'addCrewMember' function here:
   addCrewMember(astronaut){
-    console.log(this.crew.length);
     if (!(this.crew.includes(astronaut)) && this.crew.length < 3){
       this.crew.push(astronaut);
       this.inCrew = true;
@@ -34,7 +35,6 @@ export class CrewComponent implements OnInit {
       this.crew.splice(this.crew.indexOf(astronaut),1);
       this.inCrew = false;
     }
-    console.log(this.crew);
   }
 
 }
